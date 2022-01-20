@@ -15,12 +15,16 @@ import (
 // https://serverless.com/framework/docs/providers/aws/events/apigateway/#lambda-proxy-integration
 type Response events.APIGatewayProxyResponse
 
+type UserData struct {
+	Name string `json:"name"`
+}
+
 // Handler is our lambda handler invoked by the `lambda.Start` function call
-func Handler(ctx context.Context) (Response, error) {
+func Handler(ctx context.Context, userData UserData) (Response, error) {
 	var buf bytes.Buffer
 
 	body, err := json.Marshal(map[string]interface{}{
-		"message": "Go Serverless v1.0! Your function executed successfully!",
+		"message": "Hi " + userData.Name + ", Your function executed successfully!",
 	})
 	if err != nil {
 		return Response{StatusCode: 404}, err
