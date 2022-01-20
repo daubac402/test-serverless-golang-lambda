@@ -1,5 +1,5 @@
 # test-serverless-golang-lambda
-Deploy 2 golang aws lambda functions using serverless framework
+Deploy 2 golang aws lambda functions using serverless framework. References: [Hello World Go Example](https://www.serverless.com/framework/docs/providers/aws/examples/hello-world/go)
 
 ## Requirement
 1. go
