@@ -17,7 +17,7 @@ go get github.com/aws/aws-lambda-go/lambda
 go get github.com/aws/aws-lambda-go/events
 ```
 
-## Deploy
+## Build & Deploy
 ```
 make build
 make deploy
